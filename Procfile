@@ -1,1 +1,1 @@
-web: gunicorn tweet_app.wsgi
+web: gunicorn chaiheadq.wsgi

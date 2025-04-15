@@ -3,5 +3,9 @@ services:
     name: tweet-app
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn tweet_app.wsgi"
-    plan: free
+    startCommand: "gunicorn chaiheadq.wsgi"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: chaiheadq.settings
+      - key: PYTHON_VERSION
+        value: 3.11
