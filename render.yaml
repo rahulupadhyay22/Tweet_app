@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: tweet-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn tweet_app.wsgi"
+    plan: free
